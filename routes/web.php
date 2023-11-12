@@ -14,13 +14,10 @@ use App\Models\Listing;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('listings', function () {
+Route::get('/', function () {
     return view('listings', [
-        'heading' => 'listings',
+        'heading' => 'Latest listings',
         'listings' => Listing::all(),
     ]);
 });
