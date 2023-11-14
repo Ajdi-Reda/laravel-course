@@ -20,4 +20,9 @@ class ListingController extends Controller
         'listing' => $listing
     ]);
     }
+
+    //create listing
+    public function create() {
+        return view('listings.create');
+    }
 }
