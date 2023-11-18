@@ -35,7 +35,7 @@
             <ul class="flex space-x-6 mr-6 text-lg">
                 @auth
                 <li>
-                    <span class="font-bold text-upper">welcome</span>
+                    <span class="font-bold uppercase">welcome</span>
                 </li>
                 <li>
                     <a href="/listings/manage" class="hover:text-laravel"
@@ -43,6 +43,10 @@
                         Manage listings</a
                     >
                 </li>
+                <form class="inline" method="POST" action="/logout">
+                  @csrf
+                  <button type="submit" class="hover:text-laravel"><i class="fa-solid fa-door-closed"></i>Logout</button>
+                </form>
                  @else
                 <li>
                     <a href="/register" class="hover:text-laravel"
